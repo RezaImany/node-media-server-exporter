@@ -5,7 +5,7 @@ services:
         environment:
           - username=admin
           - password=admin
-          - url=http://192.168.30.170:8000/api/streams
+          - url=http://node_media_server_ip:port/api/streams
           - scrape_time=15
         ports:
             - '8000:8000'
