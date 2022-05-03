@@ -9,10 +9,8 @@ import os
 username = os.getenv('username')
 password = os.getenv('password')
 url= os.getenv("url") ### Url of Stream data http://node_media_server_ip:port/api/streams
-
 #scrape Time
 scrape_time=int(os.getenv("scrape_time"))
-
 
 #Standard Resouloutions -- sd,hd,fhd
 standard_height=[480,720,1080]
@@ -51,13 +49,13 @@ def getMetrics():
         if height in standard_height:
             match width:
                 case 640:
-                        if width == 640:
+                        if height == 480:
                             sd = sd + 1               
                 case 1280:
-                        if width == 1280:
+                        if height == 720:
                             hd = hd + 1
                 case 1920:
-                        if width == 1280:
+                        if height == 1080:
                             fhd = fhd + 1
                 case _:
                     unknown= unknown+1
