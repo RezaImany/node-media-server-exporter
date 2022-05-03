@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    media-server-exporter:
+        build: ./
+        environment:
+          - username=admin
+          - password=admin
+          - url=http://192.168.30.170:8000/api/streams
+          - scrape_time=15
+        ports:
+            - '8000:8000'
+        
