@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    media-server-exporter:
+        build: ./
+        environment:
+          - username=admin
+          - password=admin
+          - url=http://node_media_server_ip:port/api/streams
+          - scrape_time=15
+        ports:
+            - '8000:8000'
+        
